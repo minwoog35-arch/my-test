@@ -1,81 +1,10 @@
-/* Reset & 기본 스타일 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f9f9f9;
-}
-
-.contact-container {
-    background-color: #fff;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 400px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    font-size: 14px;
-    transition: border-color 0.3s;
-}
-
-form input:focus,
-form textarea:focus {
-    border-color: #007BFF;
-}
-
-button {
-    margin-top: 20px;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background-color: #007BFF;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#thankMessage {
-    margin-top: 15px;
-    text-align: center;
-    color: green;
-    font-weight: bold;
-}
-
-.hidden {
-    display: none;
-}
+body{font-family:sans-serif;background:#f3f4f6;margin:0}
+.hero{text-align:center;padding:40px;background:#004aad;color:#fff}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;padding:20px}
+.card{background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1);padding:16px}
+.card img{width:100%;border-radius:10px}
+.btn{background:#004aad;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+.cart{background:#fff;padding:16px;margin:20px;border-radius:12px}
+.footer{text-align:center;padding:10px;background:#004aad;color:#fff;margin-top:40px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#28a745;color:#fff;padding:10px 20px;border-radius:20px;opacity:0;transition:.3s}
+.toast.show{opacity:1}

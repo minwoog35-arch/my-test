@@ -1,29 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>글로벌 글램 투어 — 해외 패키지</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="contact-container">
-        <h1>문의하기</h1>
-        <form id="contactForm">
-            <label for="name">이름</label>
-            <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+  <header class="hero">
+    <h1>GLOBAL GLAM TOURS</h1>
+    <p class="subtitle">호주 · 미국 · 영국 — 6박 9일 럭셔리 패키지</p>
+    <nav class="top-nav">
+      <button id="view-products" class="btn">상품 보기</button>
+      <button id="view-cart" class="btn transparent">장바구니</button>
+    </nav>
+  </header>
 
-            <label for="email">이메일</label>
-            <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
+  <main class="container">
+    <section id="products" class="products-grid">
+      <article class="card" data-country="Australia" data-price="1799000">
+        <img src="australia.jpg" alt="Australia landmark" />
+        <h2>호주 6박 9일 패키지</h2>
+        <p class="price">₩1,799,000</p>
+        <ul class="features">
+          <li>시드니 오페라하우스, 블루마운틴 포함</li>
+          <li>5성급 호텔 6박</li>
+          <li>조식 포함 · 자유시간 넉넉</li>
+        </ul>
+        <div class="actions">
+          <button class="btn add-cart">장바구니에 담기</button>
+          <button class="btn outline view-more">자세히</button>
+        </div>
+      </article>
 
-            <label for="message">메시지</label>
-            <textarea id="message" name="message" placeholder="메시지를 입력하세요" rows="5" required></textarea>
+      <article class="card" data-country="USA" data-price="1379000">
+        <img src="usa.jpg" alt="USA landmark" />
+        <h2>미국(미서부) 6박 9일 패키지</h2>
+        <p class="price">₩1,379,000</p>
+        <ul class="features">
+          <li>그랜드캐년·라스베가스·샌프란시스코 핵심 투어</li>
+          <li>4~5성급 호텔 6박</li>
+          <li>전 일정 가이드 포함</li>
+        </ul>
+        <div class="actions">
+          <button class="btn add-cart">장바구니에 담기</button>
+          <button class="btn outline view-more">자세히</button>
+        </div>
+      </article>
 
-            <button type="submit">제출</button>
-        </form>
-        <p id="thankMessage" class="hidden">감사합니다!</p>
-    </div>
+      <article class="card" data-country="UK" data-price="3039050">
+        <img src="uk.jpg" alt="UK landmark" />
+        <h2>영국 6박 9일 패키지</h2>
+        <p class="price">₩3,039,050</p>
+        <ul class="features">
+          <li>런던 주요 관광 + 근교 투어 포함</li>
+          <li>전 일정 호텔/교통 포함</li>
+          <li>현지 가이드 포함</li>
+        </ul>
+        <div class="actions">
+          <button class="btn add-cart">장바구니에 담기</button>
+          <button class="btn outline view-more">자세히</button>
+        </div>
+      </article>
+    </section>
 
-    <script src="script.js"></script>
+    <aside id="cart" class="cart">
+      <h3>장바구니</h3>
+      <ul id="cart-items"></ul>
+      <p class="cart-total">총 합계: <span id="total">₩0</span></p>
+      <button id="checkout" class="btn">예약 진행하기</button>
+      <button id="clear-cart" class="btn transparent">비우기</button>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" aria-hidden="true">즐거운 여행되세요 🎉</div>
+
+  <footer class="footer">
+    <p>© Global Glam Tours • 럭셔리한 경험을 약속합니다.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
